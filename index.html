@@ -1,178 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LimpiaZen</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brillo Total</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Verdana', sans-serif;
-      background: #f8f5fc;
-      color: #444;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7f6;
+      color: #333;
     }
 
     header {
-      background-color: #a06cd5;
+      background-color: #2a9d8f;
       color: white;
-      text-align: center;
-      padding: 60px 20px;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     header h1 {
-      font-size: 2.8em;
-      margin: 0;
+      font-size: 1.8em;
     }
 
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
+    nav a {
+      margin-left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    section.formulario {
-      background: #ffffff;
-      padding: 40px 20px;
-      max-width: 600px;
-      margin: -40px auto 40px auto;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    .seccion-inicio {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 30px;
+      background-color: #e0f7f1;
     }
 
-    section.formulario h2 {
-      text-align: center;
-      color: #a06cd5;
+    .texto-inicio {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .texto-inicio h2 {
+      font-size: 2em;
+      color: #2a9d8f;
+    }
+
+    .texto-inicio p {
+      margin-top: 15px;
+      font-size: 1.1em;
+    }
+
+    .formulario {
+      flex: 1;
+      min-width: 280px;
+      background: white;
+      padding: 25px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.05);
+    }
+
+    .formulario h3 {
+      color: #2a9d8f;
       margin-bottom: 20px;
     }
 
-    form input, form select, form button {
+    .formulario input, .formulario select, .formulario button {
       width: 100%;
       padding: 12px;
-      margin-top: 15px;
-      border-radius: 6px;
+      margin-top: 12px;
       font-size: 1em;
+      border-radius: 6px;
       border: 1px solid #ccc;
     }
 
-    form button {
-      background-color: #a06cd5;
+    .formulario button {
+      background: #2a9d8f;
       color: white;
-      font-weight: bold;
       border: none;
+      font-weight: bold;
       cursor: pointer;
     }
 
-    form button:hover {
-      background-color: #825bb0;
+    .formulario button:hover {
+      background: #21867a;
     }
 
-    .servicios {
-      background-color: #f2eafc;
-      padding: 50px 20px;
+    .seccion-servicios {
+      background: #fff;
+      padding: 50px 30px;
+    }
+
+    .seccion-servicios h2 {
       text-align: center;
+      color: #2a9d8f;
+      margin-bottom: 40px;
     }
 
-    .servicios h2 {
-      color: #a06cd5;
-      margin-bottom: 30px;
-    }
-
-    .servicios .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    .grid-servicios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
-      max-width: 900px;
-      margin: auto;
     }
 
     .servicio {
-      background: #fff;
-      padding: 25px;
+      background: #f0f0f0;
+      padding: 20px;
       border-radius: 10px;
-      width: 260px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .servicio h3 {
-      color: #a06cd5;
-      margin-bottom: 10px;
-    }
-
-    .contacto {
-      background: #ffffff;
-      padding: 40px 20px;
       text-align: center;
     }
 
-    .contacto h2 {
-      color: #a06cd5;
+    .servicio h4 {
+      color: #2a9d8f;
       margin-bottom: 10px;
-    }
-
-    .contacto p {
-      margin: 5px 0;
     }
 
     footer {
-      background-color: #a06cd5;
+      background-color: #2a9d8f;
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>LimpiaZen</h1>
-    <p>Tu espacio limpio, tu mente en calma</p>
+    <h1>Brillo Total</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#formulario">Agenda</a>
+    </nav>
   </header>
 
-  <section class="formulario">
-    <h2>Agendar limpieza</h2>
-    <form>
-      <input type="text" placeholder="Nombre completo" required>
-      <input type="tel" placeholder="Teléfono de contacto" required>
-      <input type="text" placeholder="Dirección completa" required>
-      <select required>
-        <option value="">Tipo de limpieza</option>
-        <option>Limpieza general</option>
-        <option>Solo baños y cocina</option>
-        <option>Post-evento</option>
-        <option>Otro</option>
-      </select>
-      <button type="submit">Solicitar servicio</button>
-    </form>
+  <section id="inicio" class="seccion-inicio">
+    <div class="texto-inicio">
+      <h2>Servicio de limpieza en casa</h2>
+      <p>Expertos en dejar tu hogar impecable sin que te muevas de tu sofá. Reserva en minutos, disfruta por horas.</p>
+    </div>
+
+    <div class="formulario" id="formulario">
+      <h3>Solicita tu limpieza</h3>
+      <form>
+        <input type="text" placeholder="Nombre completo" required />
+        <input type="tel" placeholder="Número de contacto" required />
+        <input type="text" placeholder="Dirección / ciudad" required />
+        <select required>
+          <option value="">Tipo de servicio</option>
+          <option>Rápida</option>
+          <option>Completa</option>
+          <option>Post-evento</option>
+        </select>
+        <button type="submit">Reservar</button>
+      </form>
+    </div>
   </section>
 
-  <section class="servicios">
-    <h2>¿Qué incluye?</h2>
-    <div class="grid">
+  <section id="servicios" class="seccion-servicios">
+    <h2>¿Qué hacemos por ti?</h2>
+    <div class="grid-servicios">
       <div class="servicio">
-        <h3>Ambientes</h3>
-        <p>Limpieza de salas, habitaciones, pasillos y áreas comunes.</p>
+        <h4>Desempolvado</h4>
+        <p>De muebles, persianas, techos y superficies altas.</p>
       </div>
       <div class="servicio">
-        <h3>Zonas húmedas</h3>
-        <p>Aseo detallado de baños, duchas, lavamanos y cocina.</p>
+        <h4>Limpieza húmeda</h4>
+        <p>Trapeado, desinfección y aromatización de pisos y baños.</p>
       </div>
       <div class="servicio">
-        <h3>Extras</h3>
-        <p>Desempolvado, barrido, trapeado, aromatización y más.</p>
+        <h4>Cocinas</h4>
+        <p>Superficies, estufa, lavaplatos y zonas de comida.</p>
+      </div>
+      <div class="servicio">
+        <h4>Extras</h4>
+        <p>Ventanas, nevera, microondas, closets u otro a acordar.</p>
       </div>
     </div>
   </section>
 
-  <section class="contacto">
-    <h2>Contáctanos</h2>
-    <p>📱 WhatsApp: +57 312 123 4567</p>
-    <p>✉️ Correo: contacto@limpiazen.co</p>
-    <p>🕒 Horarios: Lunes a sábado - 8 a.m. a 6 p.m.</p>
-  </section>
-
   <footer>
-    © 2025 LimpiaZen · Todos los derechos reservados
+    © 2025 Brillo Total · contacto@brillototal.co · Servicio en toda Colombia
   </footer>
 
 </body>
