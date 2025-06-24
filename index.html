@@ -1,121 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hogar Limpio Ya</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LimpiaZen</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f0f0f0;
-      color: #333;
+      font-family: 'Verdana', sans-serif;
+      background: #f8f5fc;
+      color: #444;
     }
 
-    .hero {
-      background: url('https://images.unsplash.com/photo-1581579186989-8a0654d4fd86?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    header {
+      background-color: #a06cd5;
       color: white;
       text-align: center;
-      padding: 100px 20px;
+      padding: 60px 20px;
     }
 
-    .hero h1 {
-      font-size: 3em;
+    header h1 {
+      font-size: 2.8em;
       margin: 0;
-      text-shadow: 1px 1px 5px #000;
     }
 
-    .hero p {
-      font-size: 1.3em;
+    header p {
+      font-size: 1.2em;
       margin-top: 10px;
     }
 
-    .cta {
-      margin-top: 30px;
-    }
-
-    .cta a {
-      background: #0077b6;
-      color: white;
-      padding: 14px 28px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-
-    .cta a:hover {
-      background: #005f86;
-    }
-
-    .servicios {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 60px 20px;
+    section.formulario {
       background: #ffffff;
-    }
-
-    .servicio {
-      width: 300px;
-      background: #e7f5ff;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .servicio img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-
-    .servicio h3 {
-      color: #0077b6;
-      margin-top: 15px;
-    }
-
-    .formulario {
-      background: #f1f1f1;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .formulario h2 {
-      color: #0077b6;
-    }
-
-    .formulario form {
+      padding: 40px 20px;
       max-width: 600px;
-      margin: auto;
+      margin: -40px auto 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
     }
 
-    .formulario input, .formulario select, .formulario button {
+    section.formulario h2 {
+      text-align: center;
+      color: #a06cd5;
+      margin-bottom: 20px;
+    }
+
+    form input, form select, form button {
       width: 100%;
       padding: 12px;
       margin-top: 15px;
+      border-radius: 6px;
       font-size: 1em;
       border: 1px solid #ccc;
-      border-radius: 6px;
     }
 
-    .formulario button {
-      background: #0077b6;
+    form button {
+      background-color: #a06cd5;
       color: white;
       font-weight: bold;
       border: none;
       cursor: pointer;
     }
 
-    .formulario button:hover {
-      background: #005f86;
+    form button:hover {
+      background-color: #825bb0;
+    }
+
+    .servicios {
+      background-color: #f2eafc;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .servicios h2 {
+      color: #a06cd5;
+      margin-bottom: 30px;
+    }
+
+    .servicios .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .servicio {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      width: 260px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .servicio h3 {
+      color: #a06cd5;
+      margin-bottom: 10px;
+    }
+
+    .contacto {
+      background: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .contacto h2 {
+      color: #a06cd5;
+      margin-bottom: 10px;
+    }
+
+    .contacto p {
+      margin: 5px 0;
     }
 
     footer {
-      background: #0077b6;
+      background-color: #a06cd5;
       color: white;
       text-align: center;
       padding: 20px;
@@ -125,51 +124,55 @@
 </head>
 <body>
 
-  <section class="hero">
-    <h1>Servicio de Limpieza en Casa</h1>
-    <p>Tu hogar limpio, fresco y desinfectado en horas</p>
-    <div class="cta">
-      <a href="#formulario">Solicita tu limpieza</a>
-    </div>
-  </section>
+  <header>
+    <h1>LimpiaZen</h1>
+    <p>Tu espacio limpio, tu mente en calma</p>
+  </header>
 
-  <section class="servicios">
-    <div class="servicio">
-      <img src="https://images.unsplash.com/photo-1618221197033-e4a9d28784c6?auto=format&fit=crop&w=600&q=80" alt="Aseo general">
-      <h3>Aseo General</h3>
-      <p>Habitaciones, salas y zonas comunes limpias y frescas.</p>
-    </div>
-    <div class="servicio">
-      <img src="https://images.unsplash.com/photo-1581578017426-bd9a9bdecf1e?auto=format&fit=crop&w=600&q=80" alt="Baños y cocina">
-      <h3>Baños y Cocinas</h3>
-      <p>Desinfección completa de áreas sensibles y húmedas.</p>
-    </div>
-    <div class="servicio">
-      <img src="https://images.unsplash.com/photo-1621905251851-13e7f4c5ce9e?auto=format&fit=crop&w=600&q=80" alt="Ventanas y pisos">
-      <h3>Ventanas y Pisos</h3>
-      <p>Lavado de vidrios, barrido y trapeado profundo.</p>
-    </div>
-  </section>
-
-  <section id="formulario" class="formulario">
-    <h2>Agenda tu servicio</h2>
+  <section class="formulario">
+    <h2>Agendar limpieza</h2>
     <form>
-      <input type="text" placeholder="Nombre completo" required />
-      <input type="tel" placeholder="Teléfono" required />
-      <input type="text" placeholder="Dirección y ciudad" required />
+      <input type="text" placeholder="Nombre completo" required>
+      <input type="tel" placeholder="Teléfono de contacto" required>
+      <input type="text" placeholder="Dirección completa" required>
       <select required>
-        <option value="">Selecciona el servicio</option>
+        <option value="">Tipo de limpieza</option>
         <option>Limpieza general</option>
-        <option>Baños y cocina</option>
-        <option>Pisos y ventanas</option>
+        <option>Solo baños y cocina</option>
+        <option>Post-evento</option>
         <option>Otro</option>
       </select>
-      <button type="submit">Solicitar ahora</button>
+      <button type="submit">Solicitar servicio</button>
     </form>
   </section>
 
+  <section class="servicios">
+    <h2>¿Qué incluye?</h2>
+    <div class="grid">
+      <div class="servicio">
+        <h3>Ambientes</h3>
+        <p>Limpieza de salas, habitaciones, pasillos y áreas comunes.</p>
+      </div>
+      <div class="servicio">
+        <h3>Zonas húmedas</h3>
+        <p>Aseo detallado de baños, duchas, lavamanos y cocina.</p>
+      </div>
+      <div class="servicio">
+        <h3>Extras</h3>
+        <p>Desempolvado, barrido, trapeado, aromatización y más.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto">
+    <h2>Contáctanos</h2>
+    <p>📱 WhatsApp: +57 312 123 4567</p>
+    <p>✉️ Correo: contacto@limpiazen.co</p>
+    <p>🕒 Horarios: Lunes a sábado - 8 a.m. a 6 p.m.</p>
+  </section>
+
   <footer>
-    © 2025 Hogar Limpio Ya · servicio@hogarlimpio.co · Colombia
+    © 2025 LimpiaZen · Todos los derechos reservados
   </footer>
 
 </body>
